@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:87vh;
+}
+.loader{
+    height:85px;
+    width:85px;
+    margin:50% auto;
+    border-radius:50%;
+    position:relative;
+    display:block;
+}
+.loader:after{
+    position: absolute;
+    background: transparent;
+    height:85px;
+    width:85px;
+    display:block;
+    content:"";
+    top:0;
+    left:0;
+    border:20px solid;
+    border-radius:50%;
+    border-top-color: #ff1f7c;
+    border-bottom-color: #ffb91a;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    animation:spin 1.25s linear infinite;
+}
+/*i will show you here different 
+type animation or design in same code
+1 = you can make border-left as transparent 
+ if you want
+2. adding scale property in 50% */
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+   50%{
+    transform:rotate(180deg) scale(1.2);
+  }
+    100%{
+        transform:rotate(360deg);
+    }
+}
